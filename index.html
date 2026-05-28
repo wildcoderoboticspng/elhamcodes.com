@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>elhamcodes.com</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="A_7FE_Nvq47k6zbuhWZnyFJ-UxYtbaCT1uRiY_MfPVg" />
+    <meta name="google-site-verification" content="90Olse0Gv2p7jjXHzbPtim0IYC_A9bGo-jSfBLe1IUg" />
+    
+    <!-- Premium Google Fonts for Tech Agencies -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+      /* --- Root Global Settings Matched to Logo Background --- */
+      :root {
+        --bg-main: #0b0b0b;
+        --accent-teal: #00ffcc;
+        --accent-blue: #0055ff;
+        --text-heading: #ffffff;
+        --text-body: #94a3b8;
+        --card-border: rgba(255, 255, 255, 0.05);
+      }
+
+      body {
+        background-color: var(--bg-main);
+        color: #cbd5e1;
+        font-family: 'Inter', sans-serif;
+        line-height: 1.7;
+        margin: 0;
+        padding: 0 0 160px 0;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      /* --- Full Width Header Area --- */
+      .logo-container {
+        text-align: center;
+        width: 100%;
+        margin: 0 0 50px 0;
+        padding: 0;
+        background-color: var(--bg-main);
+        overflow: hidden;
+      }
+
+      .logo-container img {
+        width: 100%;
+        max-width: 1000px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+      }
+
+      /* --- Content Wrapper --- */
+      .container {
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 24px;
+        box-sizing: border-box;
+      }
+
+      /* --- Premium Content Cards with Subtle Glow --- */
+      .section-card {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.01) 100%);
+        border: 1px solid var(--card-border);
+        border-radius: 20px;
+        padding: 40px;
+        margin-bottom: 45px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        transition: border-color 0.4s ease, box-shadow 0.4s ease;
+      }
+
+      .section-card:hover {
+        border-color: rgba(0, 255, 204, 0.2);
+        box-shadow: 0 25px 50px rgba(0, 255, 204, 0.03);
+      }
+
+      /* --- Typography Layout --- */
+      h2 {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        color: var(--accent-teal);
+        font-size: 1.8rem;
+        font-weight: 800;
+        letter-spacing: -0.5px;
+        margin-top: 0;
+        margin-bottom: 30px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        padding-bottom: 15px;
+      }
+      
+      h3 { 
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        color: var(--text-heading);
+        font-size: 1.35rem; 
+        font-weight: 700;
+        margin-top: 45px;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+      }
+      
+      h3::before {
+        content: '';
+        display: inline-block;
+        width: 4px;
+        height: 20px;
+        background: var(--accent-blue);
+        margin-right: 12px;
+        border-radius: 4px;
+      }
+
+      h4 { 
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        color: var(--accent-teal);
+        font-size: 1.25rem; 
+        font-weight: 700;
+        margin-top: 35px;
+        margin-bottom: 15px;
+      }
+
+      p {
+        margin-bottom: 24px;
+        color: var(--text-body);
+        font-size: 1rem;
+      }
+      
+      b, strong {
+        color: var(--text-heading);
+        font-weight: 600;
+      }
+
+      hr {
+        border: 0;
+        height: 1px;
+        background: linear-gradient(to right, transparent, rgba(255,255,255,0.1), transparent);
+        margin: 50px 0;
+      }
+
+      /* --- Image Component Wrappers --- */
+      .media-frame {
+        position: relative;
+        display: block;
+        border-radius: 12px;
+        overflow: hidden;
+        margin: 20px 0;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      .media-frame img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 0;
+        box-shadow: none;
+        transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      
+      .media-frame:hover img {
+        transform: scale(1.03);
+      }
+
+      /* --- Services Grid & Lists --- */
+      .services-group p {
+        background: rgba(255, 255, 255, 0.01);
+        padding: 24px;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.02);
+      }
+
+      .feature-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 16px;
+        padding: 0;
+        margin: 25px 0;
+      }
+
+      .feature-item {
+        background: rgba(255, 255, 255, 0.01);
+        border: 1px solid var(--card-border);
+        padding: 16px 20px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        color: #e2f0ff;
+        font-weight: 500;
+        font-size: 0.95rem;
+      }
+
+      .feature-item span {
+        color: var(--accent-teal);
+        margin-right: 14px;
+        font-size: 1.1rem;
+      }
+
+      /* --- Project Cards Custom Grid --- */
+      .project-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 25px;
+        padding: 0;
+        list-style: none;
+      }
+      
+      .project-card {
+        background: rgba(255, 255, 255, 0.01);
+        border: 1px solid var(--card-border);
+        padding: 24px;
+        border-radius: 16px;
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .project-card:hover {
+        background: rgba(255, 255, 255, 0.02);
+        border-color: rgba(0, 255, 204, 0.2);
+        transform: translateY(-4px);
+      }
+
+      .project-card b {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 1.15rem;
+        color: var(--accent-teal);
+        display: block;
+        margin-bottom: 12px;
+        letter-spacing: 0.5px;
+      }
+
+      /* --- Accordion FAQ Customization --- */
+      .faq-item {
+        margin-bottom: 20px;
+        background: rgba(255, 255, 255, 0.01);
+        padding: 20px 24px;
+        border-radius: 12px;
+        border: 1px solid var(--card-border);
+        border-left: 4px solid var(--accent-teal);
+      }
+
+      .faq-question {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        color: var(--text-heading);
+        font-size: 1.05rem;
+        margin-bottom: 8px;
+        font-weight: 600;
+      }
+
+      .faq-answer {
+        color: var(--text-body);
+        margin: 0;
+        font-size: 0.95rem;
+      }
+
+      /* --- Forms & Buttons Interactivity Systems --- */
+      .cta-wrapper {
+        text-align: center;
+        padding: 20px 0;
+      }
+
+      #formToggleBtn {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        background: linear-gradient(135deg, var(--accent-blue), var(--accent-teal));
+        color: #020712;
+        font-weight: 700;
+        border: none;
+        padding: 18px 45px;
+        font-size: 1.1rem;
+        border-radius: 50px;
+        cursor: pointer;
+        box-shadow: 0 10px 25px rgba(0, 255, 204, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        letter-spacing: 0.5px;
+        display: inline-block;
+      }
+
+      #formToggleBtn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 35px rgba(0, 255, 204, 0.4);
+      }
+
+      #projectFormContainer {
+        display: none;
+        background: #111111;
+        border: 1px solid rgba(0, 255, 204, 0.3);
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+        margin: 35px 0;
+        animation: slideDown 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+
+      @keyframes slideDown {
+        from { opacity: 0; transform: translateY(-20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      #projectFormContainer label {
+        display: block;
+        margin-bottom: 8px;
+        color: var(--text-heading);
+        font-weight: 600;
+        font-size: 0.9rem;
+      }
+
+      #projectFormContainer input, 
+      #projectFormContainer textarea {
+        width: 100%;
+        padding: 16px;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 10px;
+        color: #fff;
+        box-sizing: border-box;
+        margin-bottom: 25px;
+        font-size: 1rem;
+        font-family: 'Inter', sans-serif;
+        transition: border-color 0.2s, background-color 0.2s;
+      }
+
+      #projectFormContainer input:focus, 
+      #projectFormContainer textarea:focus {
+        border-color: var(--accent-teal);
+        outline: none;
+        background: rgba(255, 255, 255, 0.04);
+      }
+
+      #projectFormContainer button[type="submit"] {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        background: var(--accent-teal);
+        color: #020712;
+        border: none;
+        padding: 18px 35px;
+        font-size: 1.1rem;
+        font-weight: 700;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background 0.2s, transform 0.2s;
+        width: 100%;
+      }
+
+      #projectFormContainer button[type="submit"]:hover {
+        background: #00e6b8;
+        transform: translateY(-1px);
+      }
+
+      /* --- Floating Communications Dock - Centered Alignment --- */
+      .comm-dock {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(11, 11, 11, 0.8);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        padding: 20px 24px;
+        display: flex;
+        justify-content: center; /* Centers the content horizontally */
+        align-items: center;
+        gap: 15px;
+        z-index: 999;
+        box-shadow: 0 -15px 40px rgba(0, 0, 0, 0.8);
+      }
+
+      .comm-btn {
+        flex: 1;
+        max-width: 160px; /* Constrains size so buttons bundle closely in the middle */
+        text-align: center;
+        padding: 14px 10px;
+        border-radius: 12px;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.95rem;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+
+      .comm-btn:hover {
+        transform: translateY(-4px);
+      }
+
+      .btn-whatsapp { background-color: #21b853; box-shadow: 0 4px 20px rgba(33, 184, 83, 0.25); }
+      .btn-call { background-color: #0055ff; box-shadow: 0 4px 20px rgba(0, 85, 255, 0.25); }
+      .btn-mail { background-color: #dc3545; box-shadow: 0 4px 20px rgba(220, 53, 69, 0.25); }
+
+      /* --- Enterprise Footer --- */
+      footer {
+        text-align: center;
+        padding: 60px 0;
+        margin-top: 60px;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        color: #475569;
+        font-size: 0.95rem;
+      }
+      
+      footer p {
+        margin: 6px 0;
+        color: #64748b;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <!-- Full Width Header Logo Area -->
+    <div class="logo-container">
+      <a href="https://ibb.co/RkgYG279"><img src="https://i.ibb.co/YFNP42b3/1779979828504.png" alt="ELHAM CODES Logo" border="0"></a>
+    </div>
+    
+    <!-- Content Core Wrap -->
+    <div class="container">
+
+      <div class="section-card">
+        <h2>ABOUT ELHAM CODES</h2>
+        <div class="media-frame">
+          <img src="https://i.ibb.co/hRTKv85G/istockphoto-1435220822-612x612.jpg" alt="About Studio Showcase">
+        </div>
+        <p><b>ELHAM CODES</b> is a web development brand focused on building clean, modern, and user-friendly websites for businesses, entrepreneurs, and creators. We combine strong design with smooth functionality to create websites that not only look professional but also perform well across all devices.</p>
+      </div>
+      
+      <div class="section-card services-group">
+        <h2>OUR SERVICES</h2>
+        
+        <h3>Web Designing</h3>
+        <p>
+          <span class="media-frame">
+            <img src="https://i.ibb.co/SXsZ7yBy/web-designing-1024x683.jpg" alt="Web Designing Layouts">
+          </span>
+          We create modern, visually appealing, and fully customized website designs tailored to your business goals and brand identity. Every design is carefully crafted to give your business a professional online presence that attracts visitors and builds trust with customers.
+        </p>
+        
+        <h3>Responsive Development</h3>
+        <p>
+          <span class="media-frame">
+            <img src="https://i.ibb.co/FL65PcWs/A-Complete-Guide-to-Responsive-Web-Development-in-2023-2.jpg" alt="Responsive Development Multi-view">
+          </span>
+          Our websites are built to work perfectly across all devices, including phones, tablets, layouts, and desktops. We focus on smooth performance, clean layouts, and user-friendly experiences to ensure your website looks professional everywhere.
+        </p>
+        
+        <h3>Landing Pages</h3>
+        <p>
+          <span class="media-frame">
+            <img src="https://i.ibb.co/S1Jkqrx/Landing-Page-Examples.png" alt="High Conversion Landing Designs">
+          </span>
+          We design high-converting landing pages that are built to capture attention, promote services, and turn visitors into customers. Each landing page is designed with modern layouts, strong visuals, and clear calls-to-action for better results.
+        </p>
+        
+        <h3>Business Websites</h3>
+        <p>
+          <span class="media-frame">
+            <img src="https://i.ibb.co/Kp1tWSym/Creating-Visually-Stunning-and-Functional-Business-Websites.jpg" alt="Enterprise Business Systems">
+          </span>
+          We build professional business websites that help companies establish credibility, attract customers, and grow online. Our websites are designed to showcase your services clearly while giving visitors a smooth and engaging experience.
+        </p>
+        
+        <h3>Portfolio Websites</h3>
+        <p>
+          <span class="media-frame">
+            <img src="https://i.ibb.co/mrHps7mq/images-39.jpg" alt="Creative Design Portfolios">
+          </span>
+          Showcase your work, projects, and skills with a clean and modern portfolio website designed to leave a strong impression. Perfect for developers, creatives, photographers, designers, and professionals who want to stand out online.
+        </p>
+        
+        <h3>Website Maintenance</h3>
+        <p>
+          <span class="media-frame">
+            <img src="https://i.ibb.co/994SnCFx/images-37.jpg" alt="System Infrastructure Maintenance">
+          </span>
+          We provide website maintenance services to keep your website secure, updated, fast, and running smoothly. From fixing issues to improving performance, we ensure your website continues to operate professionally at all times.
+        </p>
+         
+        <hr>
+        
+        <h4>Why Choose ELHAM CODES?</h4>
+        <div class="feature-list">
+          <div class="feature-item"><span>✔</span> Modern and clean website designs</div>
+          <div class="feature-item"><span>✔</span> Mobile-friendly layouts</div>
+          <div class="feature-item"><span>✔</span> Fast-loading pages</div>
+          <div class="feature-item"><span>✔</span> Affordable solutions</div>
+          <div class="feature-item"><span>✔</span> Professional support</div>
+          <div class="feature-item"><span>✔</span> Built for performance and growth</div>
+        </div>
+      </div>
+      
+      <div class="section-card">
+        <h2>OUR RECENT PROJECTS</h2>
+        <p>Take a look at some of the websites and digital projects we’ve created for businesses and individuals.</p>
+        
+        <ul class="project-grid">
+          <li class="project-card">
+            <b>TECHFLOW</b>
+            <span class="media-frame"><img src="https://i.ibb.co/YFBpkY0S/1779317648987.png" alt="TechFlow Interface"></span>
+          </li>
+          <li class="project-card">
+            <b>GLOW SKIN</b>
+            <span class="media-frame"><img src="https://i.ibb.co/wrP9G81s/1779317658279.png" alt="Glow Skin E-Commerce Layout"></span>
+          </li>
+          <li class="project-card">
+            <b>FIT LIFE</b>
+            <span class="media-frame"><img src="https://i.ibb.co/hxLDNPVG/1779317666084.png" alt="Fit Life Fitness Hub"></span>
+          </li>
+          <li class="project-card">
+            <b>CREATIVO</b>
+            <span class="media-frame"><img src="https://i.ibb.co/YBkLWfSH/1779317672845.png" alt="Creativo Media Strategy Core"></span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="section-card">
+        <h2>FAQ</h2>
+        
+        <div class="faq-item">
+          <p class="faq-question">How long does a website take to build?</p>
+          <p class="faq-answer">Most websites are completed within a few days depending on the size and features required.</p>
+        </div>
+        
+        <div class="faq-item">
+          <p class="faq-question">Do you make mobile-friendly websites?</p>
+          <p class="faq-answer">Yes. Every website is designed to work perfectly on phones, tablets, and desktops.</p>
+        </div>
+        
+        <div class="faq-item">
+          <p class="faq-question">Can you redesign my current website?</p>
+          <p class="faq-answer">Yes. We can improve and modernize existing websites.</p>
+        </div>
+        
+        <div class="faq-item">
+          <p class="faq-question">How much does a website cost?</p>
+          <p class="faq-answer">Pricing depends on the type of website and features needed.</p>
+        </div>
+        
+        <div class="faq-item">
+          <p class="faq-question">Do you offer website maintenance?</p>
+          <p class="faq-answer">Yes. We provide updates, fixes, and maintenance services.</p>
+        </div>
+      </div>
+
+      <div class="section-card" style="border-color: rgba(0, 255, 204, 0.25);">
+        <h2>READY TO BUILD YOUR WEBSITE?</h2>
+        <p>Let <b>ELHAM CODES</b> help you create a modern online presence that stands out and delivers results.</p>
+        
+        <div class="cta-wrapper">
+          <button id="formToggleBtn" onclick="toggleProjectForm()">START YOUR PROJECT</button>
+        </div>
+
+        <div id="projectFormContainer">
+          <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="51ade758-8182-4474-a2c8-84bd1fb60c0b">
+            
+            <label for="userName">Name</label>
+            <input type="text" id="userName" name="name" placeholder="Your Name" required>
+            
+            <label for="userEmail">Email</label>
+            <input type="email" id="userEmail" name="email" placeholder="Your Email Address" required>
+            
+            <label for="userMessage">Message</label>
+            <textarea id="userMessage" name="message" rows="5" placeholder="Tell us about your project requirements..." required></textarea>
+            
+            <button type="submit">Submit Form</button>
+          </form>
+        </div>
+
+        <h4 style="color:#ffffff; margin-top:40px;">Contact Us Directly</h4>
+        <p style="margin-bottom:0;">
+          Phone: +27 612832392<br>
+          Email: elhamcodes@gmail.com<br>
+          WhatsApp: +27 612832392
+        </p>
+      </div>
+
+    </div> <!-- End Container Area -->
+
+    <!-- Centered Floating Communications Dock Area -->
+    <div class="comm-dock">
+      <a href="https://wa.me/27612832392" class="comm-btn btn-whatsapp" target="_blank">WhatsApp</a>
+      <a href="tel:+27612832392" class="comm-btn btn-call">Call Us</a>
+      <a href="mailto:elhamcodes@gmail.com" class="comm-btn btn-mail">Email</a>
+    </div>
+
+    <footer>
+      <p><b>ELHAM CODES Developers</b></p>
+      <p>Building modern websites for businesses, creators, and brands.</p>
+      <p>&copy; 2026 ELHAM CODES. All rights reserved.</p>
+    </footer>
+
+    <script>
+      function toggleProjectForm() {
+        var formContainer = document.getElementById("projectFormContainer");
+        if (formContainer.style.display === "none" || formContainer.style.display === "") {
+          formContainer.style.display = "block";
+          formContainer.scrollIntoView({ behavior: 'smooth' });
+        } else {
+          formContainer.style.display = "none";
+        }
+      }
+    </script>
+
+  </body>
+</html>
